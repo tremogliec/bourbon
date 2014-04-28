@@ -1,0 +1,5 @@
+@import "setup";
+
+.appearance {
+  @include appearance(button);
+}
