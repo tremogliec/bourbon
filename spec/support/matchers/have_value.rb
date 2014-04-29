@@ -1,6 +1,6 @@
 RSpec::Matchers.define :have_value do |expected|
-  match do |actual|
-    selector_id = actual.sub('$', '#')
+  match do |variable|
+    selector_id = variable.sub('$', '#')
     value_attribute = ParserSupport.parser.find_by_selector(selector_id)[0]
 
     unless value_attribute.nil?
@@ -9,7 +9,7 @@ RSpec::Matchers.define :have_value do |expected|
     end
   end
 
-  failure_message_for_should do |actual|
-    %{expected variable #{actual} to have value "#{expected}"}
+  failure_message_for_should do |variable_name|
+    %{expected variable #{variable_name} to have value "#{expected}"}
   end
 end
