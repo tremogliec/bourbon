@@ -1,0 +1,5 @@
+@import "setup";
+
+.user-select {
+  @include user-select(none);
+}
