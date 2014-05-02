@@ -1,0 +1,25 @@
+@import 'setup';
+
+.transition-shorthand {
+  @include transition(all 2s ease-in-out);
+}
+
+.transition-multiple {
+  @include transition(opacity 1s ease-in 2s, width 2s ease-out);
+}
+
+.transition-multiple-properties {
+  @include transition-property (transform, opacity);
+}
+
+.transition-duration {
+  @include transition-duration(1.0s);
+}
+
+.transition-timing-function {
+  @include transition-timing-function(ease-in);
+}
+
+.transition-delay {
+  @include transition-delay(0.5s);
+}
