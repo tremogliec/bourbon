@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "animation" do
   before(:all) do
-    ParserSupport.parse_file('animation')
+    ParserSupport.parse_file('css3/animation')
   end
 
   describe "@include animation" do

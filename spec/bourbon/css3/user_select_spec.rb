@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'user-select' do
   before(:all) do
-    ParserSupport.parse_file('user-select')
+    ParserSupport.parse_file('css3/user-select')
   end
 
   context 'with arguments (none)' do

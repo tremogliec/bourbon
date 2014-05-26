@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'backface-visibility' do
   before(:all) do
-    ParserSupport.parse_file('backface-visibility')
+    ParserSupport.parse_file('css3/backface-visibility')
   end
 
   context 'with arguments (visible)' do

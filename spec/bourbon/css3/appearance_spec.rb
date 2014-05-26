@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "appearance" do
   before(:all) do
-    ParserSupport.parse_file('appearance')
+    ParserSupport.parse_file('css3/appearance')
   end
 
   describe "@include appearance" do

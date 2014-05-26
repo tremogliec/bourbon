@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'transition' do
   before(:all) do
-    ParserSupport.parse_file('transition')
+    ParserSupport.parse_file('css3/transition')
   end
 
   describe '@include transition' do
