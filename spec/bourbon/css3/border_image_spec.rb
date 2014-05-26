@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'border-image' do
   before(:all) do
-    ParserSupport.parse_file('border-image')
+    ParserSupport.parse_file('css3/border-image')
   end
 
   describe '@include border-image' do
