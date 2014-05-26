@@ -1,0 +1,13 @@
+@import 'setup';
+
+.image-only{
+  @include border-image(url("image.png"));
+}
+
+.image-with-width-and-style{
+  @include border-image(url("image.png") 20 stretch);
+}
+
+.with-linear-gradients {
+  @include border-image(linear-gradient(45deg, orange, yellow));
+}
