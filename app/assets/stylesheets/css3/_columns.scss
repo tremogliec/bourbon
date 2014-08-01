@@ -14,7 +14,7 @@
 }
 
 @mixin column-fill($arg: auto) {
-// auto || length
+// auto || balance
   @include prefixer(column-fill, $arg, webkit moz spec);
 }
 

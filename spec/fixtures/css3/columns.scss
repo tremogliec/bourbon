@@ -1,0 +1,45 @@
+@import "setup";
+
+.columns-as-count {
+  @include columns(1);
+}
+
+.columns-as-width {
+  @include columns(1px);
+}
+
+.column-count {
+  @include column-count(1);
+}
+
+.column-gap {
+  @include column-gap(1px);
+}
+
+.column-fill {
+  @include column-fill(balance);
+}
+
+.column-rule {
+  @include column-rule(dashed 1px  black);
+}
+
+.column-rule-color {
+  @include column-rule-color(black);
+}
+
+.column-rule-style {
+  @include column-rule-style(solid);
+}
+
+.column-rule-width {
+  @include column-rule-width(1px);
+}
+
+.column-span {
+  @include column-span(all);
+}
+
+.column-width {
+  @include column-width(1px);
+}
