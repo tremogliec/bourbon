@@ -1,3 +1,11 @@
+@charset "UTF-8";
+
+/// Global setting to enable or disable vendor prefixes.
+///
+/// @type Map
+///
+/// @todo Remove legacy variables in v5.0.0 (see _bourbon-deprecated-upcoming).
+
 $global-prefixes: (
   "webkit": true,
   "moz": true,

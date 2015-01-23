@@ -410,3 +410,29 @@
 
   @warn "The box-sizing mixin is deprecated and will be removed in the next major version release. This property can now be used un-prefixed.";
 }
+
+// Legacy prefixer settings
+$prefix-for-webkit: map-get($global-prefixes, "webkit") !default;
+@if $prefix-for-webkit {
+  @warn "The setting for `-webkit-` prefixes is now defined in the `$global-prefixes` map. See our documentation for more information. This variable will no longer be accepted in v5.0.0";
+}
+
+$prefix-for-mozilla: map-get($global-prefixes, "moz") !default;
+@if $prefix-for-mozilla {
+  @warn "The setting for `-moz-` prefixes is now defined in the `$global-prefixes` map. See our documentation for more information. This variable will no longer be accepted in v5.0.0";
+}
+
+$prefix-for-microsoft: map-get($global-prefixes, "ms") !default;
+@if $prefix-for-microsoft {
+  @warn "The setting for `-ms-` prefixes is now defined in the `$global-prefixes` map. See our documentation for more information. This variable will no longer be accepted in v5.0.0";
+}
+
+$prefix-for-opera: map-get($global-prefixes, "o") !default;
+@if $prefix-for-opera {
+  @warn "The setting for `-o-` prefixes is now defined in the `$global-prefixes` map. See our documentation for more information. This variable will no longer be accepted in v5.0.0";
+}
+
+$prefix-for-spec: true !default;
+@if $prefix-for-spec {
+  @warn "The option to turn off spec output when prefixing has been deprecated. See our documentation for more information. This variable will no longer be accepted in v5.0.0";
+}
