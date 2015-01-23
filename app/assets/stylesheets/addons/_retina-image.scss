@@ -1,8 +1,49 @@
+@charset "UTF-8";
+
+/// Generates retina and non-retina `background-image` declarations.
+///
+/// @param {String} $filename
+///   The image filename, without the file type extension
+///
+/// @param {Value} $background-size
+///   …
+///
+/// @param {String} $extension [png]
+///   …
+///
+/// @param {String} $retina-filename [null]
+///   …
+///
+/// @param {String} $retina-suffix [_2x]
+///   …
+///
+/// @param {Bool} $asset-pipeline [$asset-pipeline]
+///   …
+///
+/// @example scss - Usage
+///   .element {
+///     @include retina-image(home-icon, 20px 20px);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     background-image: url(home-icon.png);
+///   }
+///
+///   @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+///     .element {
+///       background-image: url(home-icon_2x.png);
+///       background-size: 20px 20px;
+///     }
+///   }
+///
+/// @require {mixin} hidpi
+/// @require {variable} $asset-pipeline
+
 @mixin retina-image($filename, $background-size, $extension: png, $retina-filename: null, $retina-suffix: _2x, $asset-pipeline: $asset-pipeline) {
   @if $asset-pipeline {
     background-image: image-url("#{$filename}.#{$extension}");
-  }
-  @else {
+  } @else {
     background-image:       url("#{$filename}.#{$extension}");
   }
 
@@ -10,22 +51,17 @@
     @if $asset-pipeline {
       @if $retina-filename {
         background-image: image-url("#{$retina-filename}.#{$extension}");
-      }
-      @else {
+      } @else {
         background-image: image-url("#{$filename}#{$retina-suffix}.#{$extension}");
       }
-    }
-
-    @else {
+    } @else {
       @if $retina-filename {
         background-image: url("#{$retina-filename}.#{$extension}");
-      }
-      @else {
+      } @else {
         background-image: url("#{$filename}#{$retina-suffix}.#{$extension}");
       }
     }
 
     background-size: $background-size;
-
   }
 }
