@@ -1,0 +1,9 @@
+@import "setup";
+
+.px {
+  font-size: em(16);
+}
+
+.px-with-base {
+  font-size: em(15, 10);
+}
